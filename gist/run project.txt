@@ -1,0 +1,5 @@
+Running the webapp
+
+you can use: mvn tomcat6:run or mvn tomcat7:run (depends on tomcat version you want).
+
+Now hit your browser http://localhost:9090 and you will use a very complicated hello world webapp sample

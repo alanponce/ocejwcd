@@ -1,0 +1,1 @@
+mvn archetype:generate -DarchetypeGroupId=org.apache.tomcat.maven -DarchetypeArtifactId=tomcat-maven-archetype -DarchetypeVersion=2.0-beta-1
