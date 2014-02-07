@@ -68,6 +68,9 @@
   <listener>
     <listener-class>com.github.diegolovison.listener.lifecycle.MyServletContextListener</listener-class>
   </listener>
+  <listener>
+    <listener-class>com.github.diegolovison.listener.lifecycle.MyHttpSessionListener</listener-class>
+  </listener>
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
