@@ -3,13 +3,20 @@ package com.github.diegolovison.servlet;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import com.github.diegolovison.domain.BindingListener;
+
 public class SessionAttributeServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
 
-		request.getSession().setAttribute("session name", "diego");
-		request.getSession().setAttribute("session name", "foo");
-		request.getSession().removeAttribute("session name");
+    HttpSession httpSession = request.getSession();
+
+		httpSession.setAttribute("session name", "diego");
+		httpSession.setAttribute("session name", "foo");
+		httpSession.removeAttribute("session name");
+
+    httpSession.setAttribute("binding", new BindingListener(httpSession.getId()));
+    httpSession.removeAttribute("binding");
 	}
 	
 }
