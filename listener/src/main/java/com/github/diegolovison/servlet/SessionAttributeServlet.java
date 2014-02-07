@@ -3,7 +3,7 @@ package com.github.diegolovison.servlet;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import com.github.diegolovison.domain.BindingListener;
+import com.github.diegolovison.bind.BindingListener;
 
 public class SessionAttributeServlet extends HttpServlet {
 
@@ -17,6 +17,8 @@ public class SessionAttributeServlet extends HttpServlet {
 
     httpSession.setAttribute("binding", new BindingListener(httpSession.getId()));
     httpSession.removeAttribute("binding");
+
+    httpSession.invalidate();
 	}
 	
 }
